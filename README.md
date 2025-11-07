@@ -9,7 +9,7 @@ This example demonstrates how two asynchronous tasks can use the same UART inter
 this example to develop more complex applications for serial communication.
 
 The example starts two FreeRTOS tasks:
-1. The first task periodically transmits `Hello world` via the UART.
+1. The first task periodically transmits `Hello Mahender` via the UART.
 2. The second task task listens, receives and prints data from the UART.
 
 ## How to use example
@@ -21,7 +21,7 @@ USB cable to connect the development board to a computer, and a simple one-wire 
 
 ### Setup the Hardware
 
-The `RXD_PIN` and `TXD_PIN` which are configurable in the code (by default `GPIO4` and `GPIO5`) need to be shorted in
+The `RXD_PIN` and `TXD_PIN` which are configurable in the code (by "Gpio25" and "Gpio26") need to be shorted in
 order to receive back the same data which were sent out.
 
 ### Configure the project
@@ -47,10 +47,11 @@ See the Getting Started Guide for full steps to configure and use ESP-IDF to bui
 You will receive the following repeating output from the monitoring console:
 ```
 ...
-I (3261) TX_TASK: Wrote 11 bytes
-I (4261) RX_TASK: Read 11 bytes: 'Hello world'
-I (4261) RX_TASK: 0x3ffb821c   48 65 6c 6c 6f 20 77 6f  72 6c 64                 |Hello world|
-...
+I (1785) RX_TASK: 0x3ffb5ec4   48 65 6c 6c 6f 20 4d 61  68 65 6e 64 65 72 0d 0a  |Hello Mahender..|
+I (1785) RX_TASK: Waiting for data...
+I (2785) TX_TASK: Wrote 16 bytes
+I (3785) RX_TASK: Read 16 bytes: 'Hello Mahender
+
 ```
 
 ## Troubleshooting

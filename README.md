@@ -3,7 +3,6 @@
 
 # UART Asynchronous Example with Separate Receive and Transfer Tasks
 
-(See the README.md file in the upper level 'examples' directory for more information about examples.)
 
 This example demonstrates how two asynchronous tasks can use the same UART interface for communication. One can use
 this example to develop more complex applications for serial communication.
@@ -37,8 +36,6 @@ Build the project and flash it to the board, then run monitor tool to view seria
 ```
 idf.py -p PORT flash monitor
 ```
-
-(To exit the serial monitor, type ``Ctrl-]``.)
 
 See the Getting Started Guide for full steps to configure and use ESP-IDF to build projects.
 

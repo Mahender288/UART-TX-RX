@@ -20,7 +20,7 @@ USB cable to connect the development board to a computer, and a simple one-wire 
 
 ### Setup the Hardware
 
-The `RXD_PIN` and `TXD_PIN` which are configurable in the code (by "Gpio25" and "Gpio26") need to be shorted in
+The `RXD_PIN` and `TXD_PIN` which are configurable in the code (by "Gpio26" and "Gpio25") need to be shorted in
 order to receive back the same data which were sent out.
 
 ### Configure the project
